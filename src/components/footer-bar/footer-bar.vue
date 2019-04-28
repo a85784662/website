@@ -64,10 +64,10 @@
     <div class="bottom-address">
       <el-row>
         <el-col :span="8">
-          <span>通信地址：重庆市渝北区芙蓉路6号</span>
+          <span>通信地址：重庆市渝北区互联网产业园二期八幢14楼</span>
         </el-col>
         <el-col :span="12">
-          <span class="tylin-copy">林同棪国际版权所有&copy;2018 林同棪（重庆）国际工程技术有限公司总工办维护</span>
+          <span class="tylin-copy">林同棪（重庆）国际工程技术有限公司 版权所有&copy;2019</span>
         </el-col>
         <el-col :span="4">
          <img src="./guohui.png"/><a  target="_blank" href="http://www.miibeian.gov.cn/publish/query/indexFirst.action">渝ICP备17005233号-1</a>

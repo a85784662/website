@@ -33,7 +33,7 @@
         this.news.id = this.$route.query.newsId;
         this.activeName = this.$route.query.activeName;
         var newsids = this.news.id;
-        this.$http.get("http://back.tylin-bim.cn/api/contents/"+newsids+"?type=enterprise").then(function(res){
+        this.$http.get("http://183.66.213.82:3001/api/contents/"+newsids+"?type=enterprise").then(function(res){
           var msg = res.body;
           if(msg.code === 200){
             this.news.id = msg.id;

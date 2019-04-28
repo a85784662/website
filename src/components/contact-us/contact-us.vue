@@ -19,7 +19,7 @@
           <el-row>
             <el-col :span="19">
               <div class="address">
-                <div>通信地址：重庆市渝北区芙蓉路6号</div>
+                <div>通信地址：重庆市渝北区互联网产业园二期八幢14楼</div>
                 <div>邮政编码：401121</div>
                 <div>联系电话：023-63087850</div>
                 <div>联系邮箱：tylintech@tylin.com.cn</div>
@@ -49,8 +49,8 @@
       },
       mounted() {
         // 百度地图API功能
-        var map = new BMap.Map("l-map");    // 创建Map实例
-        var point = new BMap.Point(106.5243766676, 29.6255963376);
+        var map = new BMap.Map("l-map");    // 创建Map实例 
+        var point = new BMap.Point(106.4967541926, 29.6311935472);
         map.centerAndZoom(point, 14);  // 初始化地图,设置中心点坐标和地图级别
         //添加地图类型控件
         map.addControl(new BMap.MapTypeControl({

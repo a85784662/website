@@ -55,7 +55,7 @@
         if(_this.flag === 1){
           this.activeName = '国外项目';
         }
-        this.$http.get("http://back.tylin-bim.cn/api/contents?currentPage=1&type=china&deleted=false&pageSize=100").then(function(res){
+        this.$http.get("http://183.66.213.82:3001/api/contents?currentPage=1&type=china&deleted=false&pageSize=100").then(function(res){
           var msg = res.body;
           if(msg.code === 200){
             this.chinaList = msg.contents;
@@ -68,7 +68,7 @@
           }
         });
         var _this = this;
-        this.$http.get("http://back.tylin-bim.cn/api/contents?currentPage=1&type=international&deleted=false&pageSize=100").then(function(res){
+        this.$http.get("http://183.66.213.82:3001/api/contents?currentPage=1&type=international&deleted=false&pageSize=100").then(function(res){
           var msg = res.body;
           if(msg.code === 200){
             this.foreignList = msg.contents;

@@ -199,7 +199,7 @@
     },
     mounted(){
       var _this = this;
-      this.$http.get("http://back.tylin-bim.cn/api/contents?type=enterprise&deleted=false&currentPage=1&pageSize=4").then(function(res){
+      this.$http.get("http://183.66.213.82:3001/api/contents?type=enterprise&deleted=false&currentPage=1&pageSize=4").then(function(res){
         let msg = res.body;
         if(msg.code === 200){
           this.news = msg.contents;
@@ -267,7 +267,7 @@
       //企业动态
       handleEnterpriseList() {
         var _this = this;
-        this.$http.get("http://back.tylin-bim.cn/api/contents?type=enterprise&deleted=false&currentPage=1&pageSize=2").then(function(res){
+        this.$http.get("http://183.66.213.82:3001/api/contents?type=enterprise&deleted=false&currentPage=1&pageSize=2").then(function(res){
           let msg = res.body;
           if(msg.code === 200){
             this.companyList = msg.contents;
@@ -283,7 +283,7 @@
       //行业要闻
       handleIndustList(){
         var _this = this;
-        this.$http.get("http://back.tylin-bim.cn/api/contents?type=industry&deleted=false&currentPage=1&pageSize=2").then(function(res){
+        this.$http.get("http://183.66.213.82:3001/api/contents?type=industry&deleted=false&currentPage=1&pageSize=2").then(function(res){
           let msg = res.body;
           if(msg.code === 200){
             this.industList = msg.contents;
