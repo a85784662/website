@@ -117,7 +117,7 @@
                   </el-col>
                   <el-col :span="21">
                     <div class="news-title"  @click="toIndustryDetail(item.id)">{{item.title}}</div>
-                    <div class="news-content">{{item.abstract}}......</div>
+                    <div class="news-content" style="height: 130px; overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;">{{item.abstract}}</div>
                   </el-col>
                 </el-row>
               </div>
@@ -131,7 +131,7 @@
               <div class="news-top-title">行业动态&nbsp;&nbsp;Industry Trends</div>
               </router-link>
               <hr/>
-              <div class="news-item" v-for=" item in industList">
+              <div class="news-item" v-for=" item in industList" style="height: 150px; overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;">
                 <el-row :gutter="20">
                   <el-col :span="3">
                     <div class="news-date-day">{{item.date.match(/月(\S*)日/)[1]}}</div>
@@ -139,7 +139,7 @@
                   </el-col>
                   <el-col :span="21">
                     <div class="news-title"><a target="_blank" :href="item.link">{{item.title}}</a></div>
-                    <div class="news-content">{{item.abstract}}......</div>
+                    <div class="news-content" style="height: 130px; overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;">{{item.abstract}}</div>
                   </el-col>
                 </el-row>
               </div>
@@ -199,7 +199,7 @@
     },
     mounted(){
       var _this = this;
-      this.$http.get("http://183.66.213.82:3001/api/contents?type=enterprise&deleted=false&currentPage=1&pageSize=4").then(function(res){
+      this.$http.get("http://58.43.196.11:3001/api/contents?type=enterprise&deleted=false&currentPage=1&pageSize=4").then(function(res){
         let msg = res.body;
         if(msg.code === 200){
           this.news = msg.contents;
@@ -267,7 +267,7 @@
       //企业动态
       handleEnterpriseList() {
         var _this = this;
-        this.$http.get("http://183.66.213.82:3001/api/contents?type=enterprise&deleted=false&currentPage=1&pageSize=2").then(function(res){
+        this.$http.get("http://58.43.196.11:3001/api/contents?type=enterprise&deleted=false&currentPage=1&pageSize=2").then(function(res){
           let msg = res.body;
           if(msg.code === 200){
             this.companyList = msg.contents;
@@ -283,7 +283,7 @@
       //行业要闻
       handleIndustList(){
         var _this = this;
-        this.$http.get("http://183.66.213.82:3001/api/contents?type=industry&deleted=false&currentPage=1&pageSize=2").then(function(res){
+        this.$http.get("http://58.43.196.11:3001/api/contents?type=industry&deleted=false&currentPage=1&pageSize=2").then(function(res){
           let msg = res.body;
           if(msg.code === 200){
             this.industList = msg.contents;
@@ -632,5 +632,10 @@
     font-weight: bold;
     font-size: 14px;
   }
+  }
+
+  .index-page .third-item .news-item{
+    height:150px;
+    overflow:hidden;
   }
 </style>

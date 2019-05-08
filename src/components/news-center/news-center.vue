@@ -171,7 +171,7 @@
         //企业动态
         handleEnterpriseList() {
           var _this = this;
-          this.$http.get("http://183.66.213.82:3001/api/contents?type=enterprise&deleted=false&currentPage="+_this.currentPage+"&pageSize="+_this.pagesize).then(function(res){
+          this.$http.get("http://58.43.196.11:3001/api/contents?type=enterprise&deleted=false&currentPage="+_this.currentPage+"&pageSize="+_this.pagesize).then(function(res){
             let msg = res.body;
             if(msg.code === 200){
               this.companyList = msg.contents;
@@ -188,7 +188,7 @@
         //行业要闻
         handleIndustList(){
           var _this = this;
-          this.$http.get("http://183.66.213.82:3001/api/contents?type=industry&deleted=false&currentPage="+_this.currentPageIndust+"&pageSize="+_this.pagesizeIndust).then(function(res){
+          this.$http.get("http://58.43.196.11:3001/api/contents?type=industry&deleted=false&currentPage="+_this.currentPageIndust+"&pageSize="+_this.pagesizeIndust).then(function(res){
             let msg = res.body;
             if(msg.code === 200){
               this.industList = msg.contents;
@@ -205,7 +205,7 @@
         //战略合作
         handleCooperationList() {
           var _this = this;
-          this.$http.get("http://183.66.213.82:3001/api/contents?type=cooperation&deleted=false&currentPage="+_this.currentPageCooperation+"&pageSize="+_this.pagesizeCooperation).then(function(res){
+          this.$http.get("http://58.43.196.11:3001/api/contents?type=cooperation&deleted=false&currentPage="+_this.currentPageCooperation+"&pageSize="+_this.pagesizeCooperation).then(function(res){
             let msg = res.body;
             if(msg.code === 200){
               this.cooperationList = msg.contents;

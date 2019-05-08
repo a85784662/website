@@ -90,7 +90,7 @@
           this.businessList();
         },
         businessList:function () {
-          this.$http.get("http://back.tylin-bim.cn/api/contents/"+this.areaId+'?sort=yes&type='+this.type).then(function(res){
+          this.$http.get("http://58.43.196.11:3001/api/contents/"+this.areaId+'?sort=yes&type='+this.type).then(function(res){
             var msg = res.body;
             if(msg.code === 200){
               this.business = msg.data.current;

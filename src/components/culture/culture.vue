@@ -125,7 +125,7 @@
         //文化建设列表
         handleCultureList() {
           var _this = this;
-          this.$http.get("http://183.66.213.82:3001/api/contents?type=culture&deleted=false&currentPage="+_this.currentPage+"&pageSize="+_this.pagesize).then(function(res){
+          this.$http.get("http://58.43.196.11:3001/api/contents?type=culture&deleted=false&currentPage="+_this.currentPage+"&pageSize="+_this.pagesize).then(function(res){
             let msg = res.body;
             if(msg.code === 200){
               this.cultureList = msg.contents;

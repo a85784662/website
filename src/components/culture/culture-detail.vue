@@ -30,7 +30,7 @@
       mounted() {
         var _this = this;
         var cultureId = this.$route.query.cultureId;
-        this.$http.get("http://back.tylin-bim.cn/api/contents/"+cultureId+"?type=enterprise").then(function(res){
+        this.$http.get("http://58.43.196.11:3001/api/contents/"+cultureId+"?type=enterprise").then(function(res){
           var msg = res.body;
           if(msg.code === 200){
             this.culture.id = msg.id;
