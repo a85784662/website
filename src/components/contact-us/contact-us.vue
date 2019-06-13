@@ -33,7 +33,7 @@
         </el-col>
       </el-row>
       <div class="menu-map">
-        <div id="l-map"></div>
+        <iframe id="l-map" src="http://www.tylin-js.com.cn/map-guide/"></iframe>
       </div>
     </div>
     </div>
@@ -48,7 +48,7 @@
         };
       },
       mounted() {
-        // 百度地图API功能
+        /*// 百度地图API功能
         var map = new BMap.Map("l-map");    // 创建Map实例 
         var point = new BMap.Point(106.4967541926, 29.6311935472);
         map.centerAndZoom(point, 14);  // 初始化地图,设置中心点坐标和地图级别
@@ -62,7 +62,7 @@
         map.setCurrentCity("重庆");          // 设置地图显示的城市 此项是必须设置的
         map.enableScrollWheelZoom(true);
         var marker = new BMap.Marker(point);        // 创建标注
-        map.addOverlay(marker);
+        map.addOverlay(marker);*/
       }
     }
 </script>
@@ -133,7 +133,8 @@
     }
     #l-map {
       width: 1150px;
-      height: 500px;
+      height: 670px;
+      border:1px solid #d8d8d8;
     }
     .QA {
       img {
